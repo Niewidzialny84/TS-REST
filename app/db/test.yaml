@@ -1,199 +1,198 @@
 recipes:
   ayaya: false
-  oopsie:
-    oof: lel
-    yrs: 'True'
-  polished_andesite:
-    type: ShapedRecipe
-    group: ''
+  black_stained_glass:
+    group: stained_glass
+    input:
+      amount: 9
+      item0:
+      - GLASS
+      item1:
+      - GLASS
+      item2:
+      - GLASS
+      item3:
+      - GLASS
+      item4:
+      - BLACK_DYE
+      item5:
+      - GLASS
+      item6:
+      - GLASS
+      item7:
+      - GLASS
+      item8:
+      - GLASS
+      sign0: a
+      sign1: b
+      sign2: c
+      sign3: d
+      sign4: e
+      sign5: f
+      sign6: g
+      sign7: h
+      sign8: i
     output:
       ==: org.bukkit.inventory.ItemStack
+      amount: 8
+      type: BLACK_STAINED_GLASS
       v: 1976
-      type: POLISHED_ANDESITE
-      amount: 4
+    shape:
+    - abc
+    - def
+    - ghi
+    type: ShapedRecipe
+  bucket:
+    group: ''
+    input:
+      amount: 6
+      item0:
+      - IRON_INGOT
+      item1: 'null'
+      item2:
+      - IRON_INGOT
+      item3: 'null'
+      item4:
+      - IRON_INGOT
+      item5: 'null'
+      sign0: a
+      sign1: b
+      sign2: c
+      sign3: d
+      sign4: e
+      sign5: f
+    output:
+      ==: org.bukkit.inventory.ItemStack
+      type: BUCKET
+      v: 1976
+    shape:
+    - abc
+    - def
+    type: ShapedRecipe
+  cut_red_sandstone_slab:
+    group: ''
+    input:
+      amount: 3
+      item0:
+      - CUT_RED_SANDSTONE
+      item1:
+      - CUT_RED_SANDSTONE
+      item2:
+      - CUT_RED_SANDSTONE
+      sign0: a
+      sign1: b
+      sign2: c
+    output:
+      ==: org.bukkit.inventory.ItemStack
+      amount: 6
+      type: CUT_RED_SANDSTONE_SLAB
+      v: 1976
+    shape:
+    - abc
+    type: ShapedRecipe
+  note_block:
+    group: ''
+    input:
+      amount: 9
+      item0:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item1:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item2:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item3:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item4:
+      - REDSTONE
+      item5:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item6:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item7:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      item8:
+      - JUNGLE_PLANKS
+      - ACACIA_PLANKS
+      - SPRUCE_PLANKS
+      - DARK_OAK_PLANKS
+      - OAK_PLANKS
+      - BIRCH_PLANKS
+      sign0: a
+      sign1: b
+      sign2: c
+      sign3: d
+      sign4: e
+      sign5: f
+      sign6: g
+      sign7: h
+      sign8: i
+    output:
+      ==: org.bukkit.inventory.ItemStack
+      type: NOTE_BLOCK
+      v: 1976
+    shape:
+    - abc
+    - def
+    - ghi
+    type: ShapedRecipe
+  oopsie:
+    oof: 'True'
+  polished_andesite:
+    group: ''
     input:
       amount: 4
-      sign0: a
       item0:
       - ANDESITE
-      sign1: b
       item1:
       - ANDESITE
-      sign2: c
       item2:
       - ANDESITE
-      sign3: d
       item3:
       - ANDESITE
+      sign0: a
+      sign1: b
+      sign2: c
+      sign3: d
+    output:
+      ==: org.bukkit.inventory.ItemStack
+      amount: 4
+      type: POLISHED_ANDESITE
+      v: 1976
     shape:
     - ab
     - cd
-  black_stained_glass:
     type: ShapedRecipe
-    group: stained_glass
-    output:
-      ==: org.bukkit.inventory.ItemStack
-      v: 1976
-      type: BLACK_STAINED_GLASS
-      amount: 8
-    input:
-      amount: 9
-      sign0: a
-      item0:
-      - GLASS
-      sign1: b
-      item1:
-      - GLASS
-      sign2: c
-      item2:
-      - GLASS
-      sign3: d
-      item3:
-      - GLASS
-      sign4: e
-      item4:
-      - BLACK_DYE
-      sign5: f
-      item5:
-      - GLASS
-      sign6: g
-      item6:
-      - GLASS
-      sign7: h
-      item7:
-      - GLASS
-      sign8: i
-      item8:
-      - GLASS
-    shape:
-    - abc
-    - def
-    - ghi
-  cut_red_sandstone_slab:
-    type: ShapedRecipe
-    group: ''
-    output:
-      ==: org.bukkit.inventory.ItemStack
-      v: 1976
-      type: CUT_RED_SANDSTONE_SLAB
-      amount: 6
-    input:
-      amount: 3
-      sign0: a
-      item0:
-      - CUT_RED_SANDSTONE
-      sign1: b
-      item1:
-      - CUT_RED_SANDSTONE
-      sign2: c
-      item2:
-      - CUT_RED_SANDSTONE
-    shape:
-    - abc
-  bucket:
-    type: ShapedRecipe
-    group: ''
-    output:
-      ==: org.bukkit.inventory.ItemStack
-      v: 1976
-      type: BUCKET
-    input:
-      amount: 6
-      sign0: a
-      item0:
-      - IRON_INGOT
-      sign1: b
-      item1: 'null'
-      sign2: c
-      item2:
-      - IRON_INGOT
-      sign3: d
-      item3: 'null'
-      sign4: e
-      item4:
-      - IRON_INGOT
-      sign5: f
-      item5: 'null'
-    shape:
-    - abc
-    - def
-  note_block:
-    type: ShapedRecipe
-    group: ''
-    output:
-      ==: org.bukkit.inventory.ItemStack
-      v: 1976
-      type: NOTE_BLOCK
-    input:
-      amount: 9
-      sign0: a
-      item0:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign1: b
-      item1:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign2: c
-      item2:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign3: d
-      item3:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign4: e
-      item4:
-      - REDSTONE
-      sign5: f
-      item5:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign6: g
-      item6:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign7: h
-      item7:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-      sign8: i
-      item8:
-      - JUNGLE_PLANKS
-      - ACACIA_PLANKS
-      - SPRUCE_PLANKS
-      - DARK_OAK_PLANKS
-      - OAK_PLANKS
-      - BIRCH_PLANKS
-    shape:
-    - abc
-    - def
-    - ghi

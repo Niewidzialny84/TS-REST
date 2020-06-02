@@ -8,6 +8,7 @@ import json
 path = 'app/db/test.yaml'
 db = None
 stream = None
+url = 'http://192.168.1.100:5000/'
 
 def Load():
     global db,stream
@@ -34,10 +35,22 @@ def not_found(error):
 def method_not_allowed(error):
     return make_response(jsonify({'error': 'Method not allowed'}), 404)
 
+@app.errorhandler(409)
+def conflict(error):
+    return make_response(jsonify({'error': 'Conflict'}), 409)
+
 @app.route('/')
 @app.route('/index')
 def index():
     return make_response(render_template('index.html', title='Home'),200)
+
+@app.route('/recipe/<string:recipe>', methods=['GET'])
+def get_recipe(recipe):
+    try:
+        Load()
+        return jsonify({recipe : json.dumps(db['recipes'][recipe])}),200
+    except KeyError:
+        abort(400)
 
 @app.route('/recipe/<string:recipe>', methods=['PUT'])
 def put_recipe(recipe):
@@ -55,7 +68,7 @@ def put_recipe(recipe):
 
         db = tmps
         Save()
-        return make_response(jsonify({'putted': recipe}), 201)
+        return make_response(jsonify({'url': url+'recipe/'+recipe}), 201)
 
 @app.route('/recipe/<string:recipe>', methods=['DELETE'])
 def delete_recipe(recipe):
@@ -63,12 +76,12 @@ def delete_recipe(recipe):
         Load()
         del db ['recipes'][recipe]
         Save()
-        return status.HTTP_204_NO_CONTENT
+        return make_response(' ' ,204)
     except KeyError:
-        abort(400)
+        return abort(409)
     
 
-@app.route('/recipe/<string:recipe>/get/input-amount', methods=['GET','POST'])
+@app.route('/recipe/<string:recipe>/input-amount', methods=['GET','POST'])
 def get_input_amount(recipe):
     try:
         Load()
@@ -76,7 +89,7 @@ def get_input_amount(recipe):
     except KeyError:
         abort(400)
 
-@app.route('/recipe/<string:recipe>/get/output-amount', methods=['GET','POST'])
+@app.route('/recipe/<string:recipe>/output-amount', methods=['GET','POST'])
 def get_output_amount(recipe):
     try:
         Load()
@@ -84,7 +97,7 @@ def get_output_amount(recipe):
     except KeyError:
         abort(400)
 
-@app.route('/recipe/<string:recipe>/get/shape', methods=['GET','POST'])
+@app.route('/recipe/<string:recipe>/shape', methods=['GET','POST'])
 def get_shape(recipe):
     try:
         Load()
