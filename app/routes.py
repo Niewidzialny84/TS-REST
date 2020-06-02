@@ -76,7 +76,7 @@ def get_input_amount(recipe):
     except KeyError:
         abort(400)
 
-@app.route('/recipe/<string:recipe>/get/input-amount', methods=['GET','POST'])
+@app.route('/recipe/<string:recipe>/get/output-amount', methods=['GET','POST'])
 def get_output_amount(recipe):
     try:
         Load()
@@ -88,6 +88,6 @@ def get_output_amount(recipe):
 def get_shape(recipe):
     try:
         Load()
-        return jsonify({'amount': db['recipes'][recipe]['output']['amount']}),200
+        return jsonify({'amount': db['recipes'][recipe]['shape']}),200
     except KeyError:
         abort(400)
