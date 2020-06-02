@@ -1,0 +1,6 @@
+TS REST.code-workspace
+/__pycache__
+/app/__pycache__
+/venv
+.flaskenv
+.vscode
